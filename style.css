@@ -1,0 +1,1321 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Geologica:wght@300&family=Marhey:wght@300&family=Orbitron&family=Poppins:wght@200;300;500;700;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --green-color: #3cb815;
+    --light-green-color: #c0eb7b;
+    --orange-color: #ff7e00;
+    --light-orange-color: #f75f1d;
+    --text-color: #1a2428;
+    --bg-color: #fff;
+}
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: var(--light-green-color);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0.5rem;
+    background-color: var(--green-color);
+}
+
+section {
+    padding: 4.5rem 0 1.5rem;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    color: var(--text-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-color);
+    box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+    padding: 20px 100px;
+    transition: 0.5s;
+    /* padding: 50px; */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.profile span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    column-gap: 0.5rem;
+}
+
+.logo .bx {
+    font-size: 24px;
+    color: var(--orange-color);
+}
+
+.navbar {
+    display: flex;
+    column-gap: 0.5rem;
+}
+
+.navbar a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover,
+.navbar .home-active {
+    background: var(--green-color);
+    border-radius: 5rem;
+    color: var(--bg-color);
+    transition: 0.5s;
+}
+
+
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background: url(images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container img {
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+}
+
+.home-text {
+    padding: 0 150px;
+    position: absolute;
+    top: 30%;
+
+}
+
+.home-text span {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--green-color);
+}
+
+.home-text h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 0.6rem 1rem;
+    background-color: var(--green-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.05rem;
+    max-width: 160px;
+}
+
+.btn .bx {
+    padding: 4px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    font-size: 20px;
+    margin: auto;
+    margin-left: 9px;
+}
+
+.btn:hover {
+    background: var(--light-orange-color);
+    transition: 0.2s ease;
+}
+
+.swiper-button-next {
+    background: url(images/right-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev {
+    background: url(images/left-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    margin-left: 10px;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.heading span {
+    color: var(--green-color);
+}
+
+.categories {
+    max-width: 968px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    margin-bottom: 30px;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    gap: 1rem;
+    margin-top: 5rem;
+
+}
+
+.categories-container .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0.5rem;
+}
+
+.categories-container .box:hover {
+    transform: scale3d(110%, 110%, 110%)
+}
+
+.categories-container .box img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+
+}
+
+.categories-container .box h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.categories-container .box .bx {
+    padding: 10px;
+    background: var(--green-color);
+    color: var(--bg-color);
+    border-radius: 5rem;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: -8%;
+    left: 5rem;
+    display: none;
+}
+
+.categories-container .box .bx:hover {
+    background: var(--light-orange-color);
+    transition: 0.2s all linear;
+}
+
+.categories-container .box:hover .bx {
+    transition: 0.2s all linear;
+    display: block;
+}
+
+.box-1 {
+    background-color: #fefbea;
+}
+
+.box-2 {
+    background-color: #e9f4e3;
+}
+
+.box-3 {
+    background-color: #faeaea;
+}
+
+.box-4 {
+    background-color: #eeeef9;
+}
+
+.box-5 {
+    background-color: #f7f6d7;
+}
+
+.products {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.products-container .box {
+    padding: 20px;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.products-container .box:hover {
+    transform: scale3d(105%, 105%, 105%);
+}
+
+.products-container .box img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.products-container .box h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.products-container .box .price {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--light-orange-color)
+}
+
+.products-container .box .price span {
+    color: var(--text-color);
+}
+
+.products-container .box .bx-cart {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background: var(--green-color);
+    font-size: 20px;
+    border-radius: 0.5rem 0 0.5rem 0;
+    color: var(--bg-color);
+}
+
+.products-container .box .bx-cart:hover {
+    background-color: var(--orange-color);
+    transition: 0.2s all linear;
+}
+
+.products-container .box .bx-heart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 20px;
+    color: var(--light-orange-color);
+}
+
+.products-container .box .disount {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background: var(--light-orange-color);
+    color: var(--bg-color);
+    padding: 4px 18px;
+    clip-path: polygon(0% 0%, 100% 0, 79% 50%, 100% 100%, 0% 100%);
+
+}
+
+.about {
+    max-width: 968px;
+    height: 445px;
+    margin-bottom: 85px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-text span {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--green-color);
+}
+
+.about-text p {
+    margin: 0.5rem 0 1rem;
+}
+
+.customers {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+
+}
+
+.customers h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.customers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.customers-container .box {
+    padding: 20px;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+    border-radius: 0.5rem;
+    border-bottom: 7px solid var(--green-color);
+}
+
+.customers-container .box:hover {
+    transform: translate(10px);
+    transition: 0.2s all linear;
+}
+
+.customers-container .box .bx {
+    font-size: 24px;
+    color: var(--green-color);
+}
+
+.customers-container .box .stars .bx {
+    font-size: 1rem;
+    font-size: var(--light-orange-color);
+}
+
+.customers-container .box p {
+    font-size: 0.938rem;
+}
+
+.review-profile {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    column-gap: 0.5rem;
+}
+
+.review-profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.review-profile h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.footer {
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    background: #fef4ea;
+    border-radius: 0.5rem;
+    padding: 20px;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.social .bx {
+    padding: 10px;
+    background: var(--bg-color);
+    color: var(--green-color);
+    border-radius: 5rem;
+    font-size: 20px;
+}
+
+.social .bx:hover {
+    background: var(--green-color);
+    color: var(--bg-color);
+    transition: 0.2s all linear;
+}
+
+.footer-box h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-box a {
+    color: #868a92;
+    margin-bottom: 1rem;
+}
+
+.footer-box a:hover {
+    color: var(--light-orange-color);
+}
+
+.footer-box form {
+    border-radius: 1px solid var(--text-color);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.footer-box form input {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.footer-box form .bx {
+    font-size: 20px;
+    color: var(--light-orange-color);
+    cursor: pointer;
+}
+
+.footer-box form .bx-envelope {
+    color: var(--green-color);
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px;
+}
+
+.loginpage {
+    /* border: 2px solid var(--text-color); */
+    padding: 2px 2px;
+    display: none;
+    position: relative;
+    right: 200px;
+    top: 20px;
+    margin-top: 35px;
+    column-gap: 8px;
+
+}
+
+.loginpage.active {
+    display: flex;
+}
+
+/* cart css */
+
+.cartt {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 1000px;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+    background-color: var(--bg-color);
+    border: 2px solid var(--orange-color);
+    z-index: 100px;
+
+
+}
+
+.cartt.active {
+    display: flex;
+}
+
+.cartt h2 {
+    padding: 5px 5px;
+    color: var(--green-color);
+    font-size: 1.3rem;
+    box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cartt p {
+    position: fixed;
+    left: 870px;
+    bottom: 10px;
+    font-size: 1.4rem;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: 2px solid var(--text-color);
+
+}
+
+.cartt span {
+    position: fixed;
+    left: 1120px;
+    bottom: 10px;
+    font-size: 1.4rem;
+    padding-left: 80px;
+    padding-right: 80px;
+    border: 2px solid var(--light-green-color);
+    color: var(--bg-color);
+    background-color: green;
+    cursor: pointer;
+
+}
+
+.cartt span:hover {
+    border: 2px solid var(--text-color);
+    color: var(--green-color);
+    background-color: var(--bg-color);
+    cursor: pointer;
+
+}
+
+
+.badge {
+    position: relative;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 10px;
+    background-color: red;
+    color: var(--bg-color);
+    position: relative;
+    bottom: 12px;
+    right: 7px;
+}
+
+/* CSS for badge content */
+.badge .badge-content {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+/* CSS for badge indicator (optional) */
+.badge .badge-indicator {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+
+
+/* //MEDIA-QUERY */
+
+
+
+@media (max-width: 1200px) {
+    header{
+        max-height: 100px;
+        padding: 40px 100px;
+    }
+
+    #menu-icon{
+        display: block;
+        position: fixed;
+        left: 570px;
+        
+    }
+    .navbar {
+       display: none;
+        flex-direction: column;
+        margin-top: 350px;
+         
+    }
+    .navbar li{  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 250px;
+        background-color: var(--bg-color);
+        width: 1250px;
+        
+    }
+    .navbar.active{
+        display: flex;
+    }
+    .profile{
+        position: fixed;
+        left: 900px;
+        display: flex;
+        
+    }
+    .loginpage{
+
+        position: fixed;
+        right: 0;
+        top: 10px;
+        left: calc(100% - 250px);
+        
+    }
+    .navbar li{
+        position: relative;
+        right: 350px;
+    }
+    .cartt{
+        z-index: 1000000;
+        max-height: 100%;
+    }
+    .cartt p{
+        margin-left: -130px;
+    }
+    #total{
+        margin-left: -120px;
+    }
+    
+
+
+}
+@media (max-width:968px){
+    #menu-icon{
+        display: block;
+        position: fixed;
+        left: 480px;
+        
+    }
+    .profile{
+        position: fixed;
+        left: 700px;
+        display: flex;
+    }
+    .loginpage{
+        position: fixed;
+        right: 0;
+        top: 10px;
+        left: calc(100% - 200px);
+    }
+    .container img{
+        width: 350px;
+        height: 350px;
+    }
+    .home-text {
+        padding: 0 100px;
+        position: absolute;
+        top: 30%;
+    
+    }
+    
+    .home-text span {
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--green-color);
+    }
+    
+    .home-text h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    .heading h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-left: 30px;
+    }
+    .heading a{
+        margin-right: 30px;
+    }
+    .categories-container .box{
+        margin:20px 5px;
+        
+    }
+    .products-container .box{
+        margin:10px 15px;
+
+    }
+    .about-text{
+        margin-right: 10px;
+    }
+    .customers-container .box{
+        margin: 0px 15px;
+    }
+    .customers-container a{
+        margin-left: 20px;
+    }
+    .footer{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 50px;
+    }
+    .cartt{
+        z-index: 1000000;
+        max-height: 100%;
+    }
+    .cartt p{
+        margin-left: -380px;
+    }
+    #total{
+        margin-left: -360px;
+    }
+
+}
+@media (max-width:768px){
+    body{
+        max-height: 100%;
+    }
+    .logo{
+        position: fixed;
+        top: 25px;
+        left: 15px;
+    }
+    #menu-icon{
+        display: block;
+        position: fixed;
+        left: 340px;
+        
+    }
+    .profile{
+        position: fixed;
+        left: 565px;
+        top: 0px;
+        font-size: 0.9rem;
+    }
+    .profile img{
+        width: 40px;
+        height: 40px;
+    }
+    .loginpage{
+        position: fixed;
+        right: 5px;
+        top: -6px;
+        left: calc(100% - 185px);
+    }
+    .navbar li{  
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 370px;
+        
+    }
+    .container img{
+        width: 290px;
+        height: 290px;
+        position: fixed;
+        top: 200px;
+        left: 400px;
+
+    }
+    .home-text {
+        padding: 0 60px;
+        position: absolute;
+        top: 250px;
+        left: 20px;
+    
+    }
+    
+    .home-text h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    .categories-container .box{
+        margin-left: 15px;
+        margin-right:  15px;
+    }
+    .categories-container .bx-right-arrow-alt{
+        margin-left: -21px;
+    }
+    .products{
+        position: relative;
+        margin-top: 330px;
+    }
+    .about{
+        margin-bottom: 50px;
+    }
+    .about img{
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-text{
+        font-size: 0.9rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .customers{
+        position: relative;
+        top: 80px;
+    }
+    .customers h2{
+        font-size: 1.4rem;
+    }
+    .footer{
+        position: relative;
+        top: 400px;
+    }
+    .copyright{
+        position: relative;
+        top: 400px;
+        
+    }
+    .cartt{
+        z-index: 1000000;
+        max-height: 100%;
+        
+    }
+    .cartt p{
+        margin-left: -580px;
+    }
+    #total{
+        margin-left: -560px;
+    }
+
+
+}
+
+@media (max-width:576px){
+    body{
+        max-height: 100%;
+    }
+    .logo{
+        position: fixed;
+        top: 25px;
+        left: 5px;
+    }
+    #menu-icon{
+        display: block;
+        position: fixed;
+        left: 270px;
+        
+    }
+    .profile{
+        position: fixed;
+        left: 395px;
+        top: 0px;
+        font-size: 0.8rem;
+    }
+    .profile img{
+        width: 35px;
+        height: 35px;
+    }
+    .loginpage{
+        position: fixed;
+        right: 5px;
+        top: -6px;
+        left: calc(100% - 185px);
+    }
+    .navbar li{  
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 440px;
+        
+    }
+    .container img{
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        top: 100px;
+        left: 250px;
+
+    }
+    .home-text {
+        padding: 0 60px;
+        position: absolute;
+        top: 320px;
+        left: 20px;
+    
+    }
+    
+    .home-text h1 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    .categories-container .box{
+        margin-left: 15px;
+        margin-right:  15px;
+    }
+    .categories-container .bx-right-arrow-alt{
+        margin-left: -21px;
+    }
+    .products{
+        position: relative;
+        margin-top: 350px;
+    }
+    .about{
+        margin-bottom: 50px;
+    }
+    .about img{
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-text{
+        font-size: 0.9rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .customers{
+        position: relative;
+        top: 180px;
+    }
+    .customers h2{
+        font-size: 1.2rem;
+    }
+    .footer{
+        position: relative;
+        top: 700px;
+    }
+    .copyright{
+        position: relative;
+        top: 700px;
+        
+    }
+    .cartt{
+        z-index: 1000000;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .cartt p{
+        margin-left: -768px;
+    }
+    #total{
+        margin-left: -740px;
+    }
+
+
+
+}
+
+@media (max-width:450px){
+    body{
+        max-height: 100%;
+    }
+    .logo{
+        position: fixed;
+        top: 25px;
+        left: 5px;
+    }
+    #menu-icon{
+        display: block;
+        position: fixed;
+        left: 200px;
+        
+    }
+    .profile{
+        position: fixed;
+        left: 255px;
+        top: 0px;
+        font-size: 0.7rem;
+    }
+    .profile img{
+        width: 35px;
+        height: 35px;
+    }
+    .loginpage{
+        position: fixed;
+        right: 5px;
+        top: -3px;
+        left: calc(100% - 185px);
+    }
+    .navbar li{  
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 510px;
+        
+    }
+    .container img{
+        width: 180px;
+        height: 180px;
+        position: fixed;
+        top: 100px;
+        left: 250px;
+
+    }
+    .home-text {
+        padding: 0 60px;
+        position: absolute;
+        top: 290px;
+        left: 20px;
+    
+    }
+    
+    .home-text h1 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    .categories-container .box{
+        margin-left: 15px;
+        margin-right:  15px;
+    }
+
+    .products{
+        position: relative;
+        margin-top: 650px;
+    }
+    .about{
+        margin-bottom: 50px;
+    }
+    .about img{
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-text{
+        font-size: 0.9rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .customers{
+        position: relative;
+        top: 180px;
+    }
+    .customers h2{
+        font-size: 1.2rem;
+    }
+    .footer{
+        position: relative;
+        top: 800px;
+    }
+    .copyright{
+        position: relative;
+        top: 800px;
+        
+    }
+    .cartt{
+        z-index: 1000000;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .cartt p{
+        margin-left: -858px;
+    }
+    #total{
+        margin-left: -859px;
+    }
+
+
+}
+@media (max-width:375px) {
+    body{
+        max-height: 100%;
+    }
+    .logo{
+        position: fixed;
+        top: 25px;
+        left: 2px;
+    }
+    #menu-icon{
+        display: block;
+        position: fixed;
+        left: 140px;
+        
+    }
+    .profile{
+        position: fixed;
+        left: 205px;
+        top: 0px;
+        font-size: 0.6rem;
+    }
+    .profile img{
+        width: 25px;
+        height: 25px;
+    }
+    .loginpage{
+        position: fixed;
+        right: 5px;
+        top: -8px;
+        left: calc(100% - 185px);
+    }
+    .navbar li{  
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 570px;
+        
+    }
+    .container img{
+        width: 130px;
+        height: 130px;
+        position: fixed;
+        top: 140px;
+        left: 100px;
+
+    }
+    .home-text {
+        padding: 0 60px;
+        position: absolute;
+        top: 290px;
+        left: 50px;
+    
+    }
+    
+    .home-text h1 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    } 
+    .categories-container .box{
+        margin-left: 25px;
+        margin-right:  25px;
+    }
+    .categories-container .bx-right-arrow-alt{
+        margin-left:60px;
+    }
+
+
+    .products{
+        position: relative;
+        margin-top: 1250px;
+    }
+    .about{
+        margin-bottom: 50px;
+    }
+    .about img{
+        width: 200px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-text{
+        font-size: 0.8rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .customers{
+        position: relative;
+        top: 150px;
+    }
+    .customers h2{
+        font-size: 1.0rem;
+    }
+    .footer{
+        position: relative;
+        top: 800px;
+    }
+    .copyright{
+        position: relative;
+        top: 800px;
+        
+    }
+    .cartt{
+        z-index: 1000000;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .cartt p{
+        margin-left: -848px;
+        font-size: 0.8rem;
+        height: 35px;
+        width: 33px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+    }
+    #total{
+        margin-left: -920px;
+        font-size: 0.9rem;
+        width: 8px;
+        height: 37px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+
+    }
+
+
+
+    
+}

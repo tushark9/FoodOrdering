@@ -1,0 +1,221 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Geologica:wght@300&family=Marhey:wght@300&family=Orbitron&family=Poppins:wght@200;300;500;700;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+}
+:root {
+    --green-color: #3cb815;
+    --light-green-color: #c0eb7b;
+    --orange-color: #ff7e00;
+    --light-orange-color: #f75f1d;
+    --text-color: #1a2428;
+    --bg-color: #fff;
+}
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: var(--light-green-color);
+}
+::-webkit-scrollbar-thumb{
+    width: 0.5rem;
+    background-color: var(--green-color);
+}
+.btn {
+    padding: 0.6rem 1rem;
+    background-color: var(--green-color);
+    color: var(--bg-color);
+    font-weight: 400;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 0.05rem;
+    max-width: 120px;
+}
+.btn .bx{
+    padding: 4px ;
+    /* padding-right: 50px; */
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    font-size: 20px;
+    margin: auto;
+    margin-left: 15px;
+}
+
+.btn:hover{
+    background: var(--light-orange-color);
+    transition: 0.2s ease;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading h1{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.heading span{
+    color: var(--green-color);
+}
+.categories{
+    max-width: 968px;
+    /* height: 1200px; */
+    height: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    margin-bottom: 30px;
+}
+.categories-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,auto));
+    gap: 4rem;
+    margin-top: 4rem;
+
+}
+.categories-container .box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0.5rem;
+    
+    
+}
+.categories-container .box:hover{
+    transform:scale3d(110%,110%,110%)
+}
+.categories-container .box img{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    object-position: center;
+
+}
+.categories-container .box h2{
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.categories-container .box .bx{
+    padding: 10px;
+    background: var(--green-color);
+    color: var(--bg-color);
+    border-radius: 5rem;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: -8%;
+    left: 5rem;
+    display: none;
+    
+    
+    
+}
+.categories-container .box .bx:hover{
+    background: var(--light-orange-color);
+    transition: 0.2s all linear;
+}
+.categories-container .box:hover .bx{
+    transition: 0.2s all linear;
+    display: block;
+}
+.box-1{
+    background-color: #fefbea;
+}
+.box-2{
+    background-color: #e9f4e3;
+}
+.box-3{
+    background-color: #faeaea;
+}
+.box-4{
+    background-color: #eeeef9;
+}
+.box-5{
+    background-color: #f7f6d7;
+}
+.box-6{
+    background-color: #faeaea;
+
+}
+.box-7{
+    background-color: #f7f6d7;
+
+}
+.box-8{
+    background-color: #e9f4e3;
+
+}
+
+
+/* media */
+
+@media (max-width: 968px){
+
+    .categories{
+        margin-top: 40px;
+        margin-bottom: 100px;
+        max-width: 80%;
+        max-height: 100%;
+        height: 100%;
+    }
+   
+
+}
+
+@media (max-width:768px){
+    .categories{
+        margin-top: 40px;
+        margin-bottom: 100px;
+        max-width: 80%;
+        max-height: 100%;
+        height: 100%;
+    }
+   
+}
+
+@media (max-width:576px){
+    .categories{
+        margin-top: 40px;
+        margin-bottom: 100px;
+        max-width: 80%;
+        max-height: 100%;
+        height: 100%;
+    }
+   
+}
+
+@media (max-width:450px){
+    .categories{
+        margin-top: 40px;
+        margin-bottom: 100px;
+        max-width: 80%;
+        max-height: 100%;
+        height: 100%;
+    }
+   
+
+}
+
+@media (max-width:375px){
+    .categories{
+        margin-top: 40px;
+        margin-bottom: 100px;
+        max-width: 80%;
+        max-height: 100%;
+        height: 100%;
+    }
+   
+}

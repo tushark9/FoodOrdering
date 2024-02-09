@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="VegFood.css">
+        <!-- BOXICONS LINK -->
+        <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+      />
+    <title>SOUP DISHES</title>
+</head>
+<body>
+    <section class="products" id="products">
+        <div class="heading">
+          <h1 style="text-align: center;display:flex;justify-content: center;">Our Popular Soup  <br /><span> Dishes are :-</span></h1>
+          <a href="index.html" class="btn"
+            >Home<i class="bx bx-right-arrow-alt"></i
+          ></a>
+          <a class="c" style="font-size: 1.3rem" href="#cart">
+            <i class="bx bxs-cart">
+              <div class="badge" id="myBadge">
+                <span class="badge-content">0</span>
+              </div>
+            </i>
+          </a>
+        </div>
+        <!-- Products content -->
+        <div class="products-container">
+          <!-- Box-1 -->
+          <div class="box">
+            <img src="https://purepng.com/public/uploads/thumbnail//purepng.com-soupfood-soup-9415246417294khki.png" alt="" />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Cucumber</h2>
+            <h3 class="price">$2.99 <span>Plate</span></h3>
+            <button onclick="addToCart('Cucumber Soup ', 2.99)">
+              <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-25%</span>
+          </div>
+    
+          <!-- Box-2 -->
+          <div class="box">
+            <img src="https://purepng.com/public/uploads/thumbnail//purepng.com-soupsoupclear-soupsthick-soupshot-soups-1411529824087nzktn.png" alt="" />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Vegetables Soup</h2>
+            <h3 class="price">$5.99 <span>Plate</span></h3>
+            <button onclick="addToCart('Vegetables Soup ', 5.99)">
+              <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-15%</span>
+          </div>
+    
+          <!-- Box-3 -->
+          <div class="box">
+            <img src="https://purepng.com/public/uploads/thumbnail//purepng.com-soupsoupclear-soupsthick-soupshot-soups-1411529824413eymyl.png" alt="" />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Tomato Soup</h2>
+            <h3 class="price">$4.99 <span>Plate</span></h3>
+            <button onclick="addToCart('Tomato Soup ', 4.99)">
+              <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-30%</span>
+          </div>
+    
+          <!-- Box-4 -->
+          <div class="box">
+            <img src="https://purepng.com/public/uploads/thumbnail//purepng.com-soupsoupclear-soupsthick-soupshot-soups-1411529824465qvlpv.png" alt="" />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Cottage Cheese</h2>
+            <h3 class="price">$3.99 <span>Plate</span></h3>
+            <button onclick="addToCart('Cottage Cheese ', 3.99)">
+              <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-5%</span>
+          </div>
+    
+          <!-- Box-5 -->
+          <div class="box">
+            <img src="https://purepng.com/public/uploads/thumbnail//purepng.com-soupsoupclear-soupsthick-soupshot-soups-1411529825154jpopm.png" alt="" />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Mashroom Soup</h2>
+            <h3 class="price">$9.99 <span>Plate</span></h3>
+            <button onclick="addToCart('Mashroom Soup ', 9.99)">
+              <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-25%</span>
+          </div>
+    
+          <!-- Box-6 -->
+          <div class="box">
+            <img src="https://purepng.com/public/uploads/thumbnail//purepng.com-soupsoupclear-soupsthick-soupshot-soups-1411529826618e7cgm.png" alt="" />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Noodles soup</h2>
+            <h3 class="price">$5.99 <span>Plate</span></h3>
+            <button onclick="addToCart('Noodles soup ', 5.99)">
+              <i class="bx bx-cart"></i>
+            </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-30%</span>
+          </div>
+        </div>
+      </section>
+      <div class="cartt" id="Shopping Cart">
+        <a class="c" style="font-size: 1.3rem" href="Soup.html"
+          ><i class="bx bxs-cart"></i>
+        </a>
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>
+          Total: $ <a href="Payment.html"><span id="total">0</span></a>
+        </p>
+      </div>
+  
+      <script>
+        //SHOPPING CART
+        const shoppingButton = document.querySelector(".c");
+        const hidecart = document.querySelector(".cartt");
+        const opencartButtons = document.querySelectorAll(".bx-cart");
+  
+        shoppingButton.addEventListener("click", () => {
+          hidecart.classList.toggle("active");
+        });
+  
+        opencartButtons.forEach((button) => {
+          button.addEventListener("click", () => {});
+        });
+  
+        // Initialize cart and total
+        let cart = [];
+        let total = 0;
+  
+        // Function to add a product to the cart
+        function addToCart(productName, price) {
+          const existingProduct = cart.find((item) => item.name === productName);
+  
+          if (existingProduct) {
+            existingProduct.quantity++;
+          } else {
+            cart.push({ name: productName, price: price, quantity: 1 });
+          }
+  
+          updateCart();
+        }
+  
+        // Function to remove a product from the cart
+        function removeFromCart(index) {
+          cart.splice(index, 1);
+          updateCart();
+        }
+  
+        // Function to increase the quantity of a product in the cart
+        function increaseQuantity(index) {
+          cart[index].quantity++;
+          updateCart();
+        }
+  
+        // Function to decrease the quantity of a product in the cart
+        function decreaseQuantity(index) {
+          if (cart[index].quantity > 1) {
+            cart[index].quantity--;
+          } else {
+            removeFromCart(index);
+          }
+          updateCart();
+        }
+  
+        // Function to update the cart UI and total
+        function updateCart() {
+          const cartItems = document.getElementById("cartItems");
+          const totalElement = document.getElementById("total");
+          const badgeContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+  
+          // Update badge
+          updateCartBadge(badgeContent);
+  
+          // Clear previous items
+          cartItems.innerHTML = "";
+  
+          // Update cart items
+          cart.forEach((item, index) => {
+            const li = document.createElement("li");
+            li.textContent = `${item.name} - $${item.price} - Quantity: ${item.quantity} `;
+  
+            const increaseButton = document.createElement("button");
+            increaseButton.textContent = "+";
+            increaseButton.style.backgroundColor = "#3cb815";
+            increaseButton.style.marginRight = "8px";
+            increaseButton.style.marginLeft = "8px";
+            increaseButton.style.marginBottom = "18px";
+            increaseButton.style.marginTop = "20px";
+            increaseButton.style.color = "#fff";
+            increaseButton.style.fontSize = "1.4rem";
+            increaseButton.onclick = () => increaseQuantity(index);
+            li.appendChild(increaseButton);
+  
+            const decreaseButton = document.createElement("button");
+            decreaseButton.textContent = "-";
+            decreaseButton.style.backgroundColor = "#3cb815"; // Example styling
+            decreaseButton.style.color = "#fff";
+            decreaseButton.style.marginRight = "8px";
+            decreaseButton.style.marginBottom = "18px";
+            decreaseButton.style.marginTop = "20px";
+            decreaseButton.style.fontSize = "1.4rem";
+            decreaseButton.onclick = () => decreaseQuantity(index);
+            li.appendChild(decreaseButton);
+  
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.style.backgroundColor = "#ff7e00"; // Example styling
+            deleteButton.style.color = "#fff"; // Example styling
+            deleteButton.style.fontSize = "1.4rem"; // Example styling
+            deleteButton.onclick = () => removeFromCart(index);
+            li.appendChild(deleteButton);
+  
+            cartItems.appendChild(li);
+          });
+  
+          // Update total
+          total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+          totalElement.textContent = total;
+        }
+  
+        // Function to update the cart badge
+        function updateCartBadge(quantity) {
+          var badgeContent = document
+            .getElementById("myBadge")
+            .querySelector(".badge-content");
+          badgeContent.innerText = quantity;
+        }
+  
+        // Example: Update cart badge with initial quantity
+        updateCartBadge(cart.reduce((acc, item) => acc + item.quantity, 0));
+      </script>
+</body>
+</html>

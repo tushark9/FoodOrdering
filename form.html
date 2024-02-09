@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0">
+	<link rel="stylesheet" href="form.css">
+     <!-- BOXICONS LINK -->
+     <link
+     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+     rel="stylesheet"
+   />
+	<title>The Product Review and Rating</title>
+</head>
+
+<body>
+	<div class="container">
+		<h1 style="color:#3cb815;">ADD REVIEW HERE <span style="color: #1a2428;">:-</span></h1>
+		<div class="rating">
+			<span id="rating">0</span>/5
+		</div>
+		<div class="stars" id="stars">
+			<span class="star" data-value="1">★</span>
+			<span class="star" data-value="2">★</span>
+			<span class="star" data-value="3">★</span>
+			<span class="star" data-value="4">★</span>
+			<span class="star" data-value="5">★</span>
+		</div>
+		<p style="color: #ff7e00; font-size: 1.2rem;">Share your review:</p>
+		<textarea id="review"
+				placeholder="Write your review here">
+		</textarea>
+        <div class="cont" style="display: flex ;column-gap: 7.5rem;" >
+		<button id="submit"  class="btn" >Submit<i class="bx bx-right-arrow-alt "></i> </button>
+        <a href="index.html"  class="btn" style="border: 2px solid #1a2428;" >Home<i class="bx bx-right-arrow-alt "></i> </a>
+        </div>
+		<div class="reviews" id="reviews">
+		</div>
+	</div>
+	<script src="form.js"></script>
+</body>
+
+</html>

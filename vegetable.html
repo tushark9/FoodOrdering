@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="VegFood.css" />
+    <!-- BOXICONS LINK -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Fresh Vegetables</title>
+  </head>
+  <body>
+    <section class="products" id="products" style="height: 2850px">
+      <div class="heading">
+        <h1 style="text-align: center; display: flex; justify-content: center">
+          Our Popular  Fresh<br /><span>  Vegetables are :-</span>
+        </h1>
+        <a href="index.html" class="btn"
+          >Home<i class="bx bx-right-arrow-alt"></i
+        ></a>
+        <a class="c" style="font-size: 1.3rem" href="#cart">
+          <i class="bx bxs-cart">
+            <div class="badge" id="myBadge">
+              <span class="badge-content">0</span>
+            </div>
+          </i>
+        </a>
+      </div>
+      <!-- Products content -->
+      <div class="products-container">
+        <!-- Box-1 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//potatoes-91506417643f5utr31p2f.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Potatoes</h2>
+          <h3 class="price">$2.99 <span>Kg</span></h3>
+          <button onclick="addToCart('Potatoes ', 2.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-25%</span>
+        </div>
+
+        <!-- Box-2 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//tomatoes-91506418796i7q9cxtwdb.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Tomatoes</h2>
+          <h3 class="price">$5.99 <span>Kg</span></h3>
+          <button onclick="addToCart('Tomatoes ', 5.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-15%</span>
+        </div>
+
+        <!-- Box-3 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//salad-91506419464ritwxqvukf.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Salad</h2>
+          <h3 class="price">$4.99 <span>250gram</span></h3>
+          <button onclick="addToCart('Salad ', 4.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-30%</span>
+        </div>
+
+        <!-- Box-4 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-eggplanteggplantvegetablefoodhealthyeggplants-481522162329tqsg3.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Eggplant</h2>
+          <h3 class="price">$3.99 <span>Kg</span></h3>
+          <button onclick="addToCart('Eggplant ', 3.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-5%</span>
+        </div>
+
+        <!-- Box-5 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-pinapple-clipartpinapplepen-pinapple-apple-penfruitvegetableheathlyfoodclipart-331522772068gphes.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Pinapple</h2>
+          <h3 class="price">$9.99 <span>Kg</span></h3>
+          <button onclick="addToCart('Pinapple ', 9.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-25%</span>
+        </div>
+
+        <!-- Box-6 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-yellow-tomatotomatovegetable-971524598905n3knt.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Yellow-tomato</h2>
+          <h3 class="price">$4.99 <span>250gram</span></h3>
+          <button onclick="addToCart('Yellow-tomato ', 4.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-15%</span>
+        </div>
+
+        <!-- Box-7 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-tamarindvegetable-tamarind-941524681660ibws7.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Tamarind</h2>
+          <h3 class="price">$6.99 <span>500gram</span></h3>
+          <button onclick="addToCart('Tamarind ', 6.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-35%</span>
+        </div>
+
+        <!-- Box-8 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-turnip-rutabaga-rootvegetablesroot-vegetable-rutabaga-swede-turnip-neep-941524684592op70r.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Rutabaga</h2>
+          <h3 class="price">$4.99 <span>250gram</span></h3>
+          <button onclick="addToCart('Rutabaga ', 4.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-30%</span>
+        </div>
+
+        <!-- Box-9 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-sweet-potatovegetablesroot-vegetable-sweet-potato-yam-941524685017dwzsk.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Sweet-potatos</h2>
+          <h3 class="price">$5.99 <span>Kg</span></h3>
+          <button onclick="addToCart('Sweet-potatos ', 5.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-20%</span>
+        </div>
+
+        <!-- Box-10 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-sweet-potato-slicevegetablesroot-vegetable-sweet-potato-yam-941524685036jzrf4.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Sweet-potato</h2>
+          <h3 class="price">$10.99 <span>Piece</span></h3>
+          <button onclick="addToCart('Sweet-potato ', 10.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-10%</span>
+        </div>
+
+        <!-- Box-11 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-radicchiored-saladvegetablesradicchio-leaf-chicory-leaf-vegetable-red-leaves-bitter-941524685687t6ly4.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Radicchiored-salad</h2>
+          <h3 class="price">$5.99 <span>500gram</span></h3>
+          <button onclick="addToCart('Radicchiored-salad ', 5.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-30%</span>
+        </div>
+
+        <!-- Box-12 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-fresh-parsnip-rootvegetablesroot-vegetable-parsnip-9415246859430vnmr.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Parsnip-root</h2>
+          <h3 class="price">$7.99 <span>kg</span></h3>
+          <button onclick="addToCart('Parsnip-root', 7.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-30%</span>
+        </div>
+
+        <!-- Box-13 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-rainbow-swiss-chardvegetablesspinach-leaf-vegetable-swiss-chard-silverbeet-941524685694twdfr.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Swiss-chard</h2>
+          <h3 class="price">$3.99 <span>Kg</span></h3>
+          <button onclick="addToCart(' Swiss-chard', 3.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-15%</span>
+        </div>
+
+        <!-- Box-14 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-mangold-or-swiss-chardvegetablesspinach-leaf-vegetable-swiss-chard-silverbeet-941524685955ylgd1.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Mangold-or-swiss-chard</h2>
+          <h3 class="price">$2.99 <span>kg</span></h3>
+          <button onclick="addToCart('Mangold-or-swiss-chard ', 2.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-18%</span>
+        </div>
+
+        <!-- Box-15 -->
+        <div class="box">
+          <img
+            src="https://purepng.com/public/uploads/thumbnail//purepng.com-turnipsvegetablesroot-vegetablerutabagaswedeturnipneep-941524702897rhwcm.png"
+            alt=""
+          />
+          <span>Fresh Items</span>
+          <h2>Farm fresh organic <br />Turnips</h2>
+          <h3 class="price">$3.99 <span>Kg</span></h3>
+          <button onclick="addToCart('Turnips ', 3.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+          <i class="bx bx-heart"></i>
+          <span class="disount">-15%</span>
+        </div>
+
+        <!-- Box-16 -->
+        <div class="box">
+            <img
+              src="https://purepng.com/public/uploads/thumbnail//purepng.com-carrotcarrot-root-vegetable-941524708291s8cx8.png"
+              alt=""
+            />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Carrot</h2>
+            <h3 class="price">$6.99 <span>Kg</span></h3>
+            <button onclick="addToCart('Carrot ', 6.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-10%</span>
+          </div>
+          <!-- Box-17 -->
+        <div class="box">
+            <img
+              src="https://purepng.com/public/uploads/thumbnail//purepng.com-asparagusvegetables-asparagus-spring-vegetable-941524711258nxen9.png"
+              alt=""
+            />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Asparagu</h2>
+            <h3 class="price">$2.99 <span>Kg</span></h3>
+            <button onclick="addToCart('Asparagu ', 2.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-30%</span>
+          </div>
+
+          <!-- Box-18 -->
+        <div class="box">
+            <img
+              src="https://purepng.com/public/uploads/thumbnail//purepng.com-asparagus-bundlvegetables-asparagus-garden-asparagus-spring-vegetable-bundle-9415247116136xpgd.png"
+              alt=""
+            />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Asparagus-bundle</h2>
+            <h3 class="price">$5.99 <span>Kg</span></h3>
+            <button onclick="addToCart('Asparagus-bundle ', 5.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-20%</span>
+          </div>
+
+          <!-- Box-19 -->
+        <div class="box">
+            <img
+              src="https://purepng.com/public/uploads/thumbnail//purepng.com-beetbeetcarrot-shaped-rootred-beetrootroot-vegetable-1701527238933vnu4h.png"
+              alt=""
+            />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Beetroot</h2>
+            <h3 class="price">$5.99 <span>Kg</span></h3>
+            <button onclick="addToCart('Beetroot ', 5.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-35%</span>
+          </div>
+
+          <!-- Box-20 -->
+        <div class="box">
+            <img
+              src="https://purepng.com/public/uploads/thumbnail//purepng.com-broccolibroccoligreen-plantvegetablebroccolo-1701527240045tc8cv.png"
+              alt=""
+            />
+            <span>Fresh Items</span>
+            <h2>Farm fresh organic <br />Broccoli</h2>
+            <h3 class="price">$3.99 <span>Kg</span></h3>
+            <button onclick="addToCart('Broccoli ', 3.99)">
+            <i class="bx bx-cart"></i>
+          </button>
+            <i class="bx bx-heart"></i>
+            <span class="disount">-10%</span>
+          </div>
+  
+  
+  
+  
+      
+  
+
+        
+      </div>
+    </section>
+    <div class="cartt" id="Shopping Cart">
+      <a class="c" style="font-size: 1.3rem" href="vegetable.html"
+        ><i class="bx bxs-cart"></i>
+      </a>
+      <h2>Shopping Cart</h2>
+      <ul id="cartItems"></ul>
+      <p>
+        Total: $ <a href="Payment.html"><span id="total">0</span></a>
+      </p>
+    </div>
+
+    <script>
+      //SHOPPING CART
+      const shoppingButton = document.querySelector(".c");
+      const hidecart = document.querySelector(".cartt");
+      const opencartButtons = document.querySelectorAll(".bx-cart");
+
+      shoppingButton.addEventListener("click", () => {
+        hidecart.classList.toggle("active");
+      });
+
+      opencartButtons.forEach((button) => {
+        button.addEventListener("click", () => {});
+      });
+
+      // Initialize cart and total
+      let cart = [];
+      let total = 0;
+
+      // Function to add a product to the cart
+      function addToCart(productName, price) {
+        const existingProduct = cart.find((item) => item.name === productName);
+
+        if (existingProduct) {
+          existingProduct.quantity++;
+        } else {
+          cart.push({ name: productName, price: price, quantity: 1 });
+        }
+
+        updateCart();
+      }
+
+      // Function to remove a product from the cart
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+      }
+
+      // Function to increase the quantity of a product in the cart
+      function increaseQuantity(index) {
+        cart[index].quantity++;
+        updateCart();
+      }
+
+      // Function to decrease the quantity of a product in the cart
+      function decreaseQuantity(index) {
+        if (cart[index].quantity > 1) {
+          cart[index].quantity--;
+        } else {
+          removeFromCart(index);
+        }
+        updateCart();
+      }
+
+      // Function to update the cart UI and total
+      function updateCart() {
+        const cartItems = document.getElementById("cartItems");
+        const totalElement = document.getElementById("total");
+        const badgeContent = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+        // Update badge
+        updateCartBadge(badgeContent);
+
+        // Clear previous items
+        cartItems.innerHTML = "";
+
+        // Update cart items
+        cart.forEach((item, index) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.name} - $${item.price} - Quantity: ${item.quantity} `;
+
+          const increaseButton = document.createElement("button");
+          increaseButton.textContent = "+";
+          increaseButton.style.backgroundColor = "#3cb815";
+          increaseButton.style.marginRight = "8px";
+          increaseButton.style.marginLeft = "8px";
+          increaseButton.style.marginBottom = "18px";
+          increaseButton.style.marginTop = "20px";
+          increaseButton.style.color = "#fff";
+          increaseButton.style.fontSize = "1.4rem";
+          increaseButton.onclick = () => increaseQuantity(index);
+          li.appendChild(increaseButton);
+
+          const decreaseButton = document.createElement("button");
+          decreaseButton.textContent = "-";
+          decreaseButton.style.backgroundColor = "#3cb815"; // Example styling
+          decreaseButton.style.color = "#fff";
+          decreaseButton.style.marginRight = "8px";
+          decreaseButton.style.marginBottom = "18px";
+          decreaseButton.style.marginTop = "20px";
+          decreaseButton.style.fontSize = "1.4rem";
+          decreaseButton.onclick = () => decreaseQuantity(index);
+          li.appendChild(decreaseButton);
+
+          const deleteButton = document.createElement("button");
+          deleteButton.textContent = "Delete";
+          deleteButton.style.backgroundColor = "#ff7e00"; // Example styling
+          deleteButton.style.color = "#fff"; // Example styling
+          deleteButton.style.fontSize = "1.4rem"; // Example styling
+          deleteButton.onclick = () => removeFromCart(index);
+          li.appendChild(deleteButton);
+
+          cartItems.appendChild(li);
+        });
+
+        // Update total
+        total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+        totalElement.textContent = total;
+      }
+
+      // Function to update the cart badge
+      function updateCartBadge(quantity) {
+        var badgeContent = document
+          .getElementById("myBadge")
+          .querySelector(".badge-content");
+        badgeContent.innerText = quantity;
+      }
+
+      // Example: Update cart badge with initial quantity
+      updateCartBadge(cart.reduce((acc, item) => acc + item.quantity, 0));
+    </script>
+  </body>
+</html>
